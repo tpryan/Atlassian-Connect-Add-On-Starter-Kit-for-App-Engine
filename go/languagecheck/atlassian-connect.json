@@ -1,0 +1,38 @@
+{
+     "name": "Language Check",
+     "description": "Atlassian Connect add-on",
+     "key": "com.google.cloud.das.languagecheck",
+     "baseUrl": "http://localhost:8080",
+     "vendor": {
+         "name": "Google Cloud Platform",
+         "url": "http://cloud.google.com"
+     },
+     "links": {
+         "self": "http://localhost:8080/atlassian-connect.json",
+         "homepage": "http://localhost:8080/atlassian-connect.json"
+     },
+     "authentication": {
+         "type": "jwt"
+     },
+     "lifecycle": {
+         "installed": "/installed"
+     },
+     "scopes": [
+         "READ"
+     ],
+      "modules": {
+          "generalPages": [
+              {
+                  "key": "activity",
+                  "location": "system.top.navigation.bar",
+                  "name": {
+                      "value": "Language Check"
+                  },
+                  "url": "/index.html",
+                  "conditions": [{
+                      "condition": "user_is_logged_in"
+                  }]
+              }
+          ]
+      }
+ }
