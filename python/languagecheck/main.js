@@ -54,7 +54,6 @@ function detectLanguage(issue){
 function addIssueToList(issue, language){
 	var baseUrl = getQueryVariable('xdm_e') + getQueryVariable('cp');
     baseUrl = htmlEscape(baseUrl);
-    alert(baseUrl);
     var link = $("<a>", {href: baseUrl + '/browse/' + issue.key, target:"_top"}).append( issue.fields.summary );
     var li = $("<li>");
     li.append(link);
